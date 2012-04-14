@@ -24,6 +24,7 @@ import java.security.NoSuchAlgorithmException;
 
 import org.passwordmaker.android.hashalgos.HmacHashAlgo;
 import org.passwordmaker.android.hashalgos.Md5HashAlgo;
+import org.passwordmaker.android.hashalgos.Md5v06HashAlgo;
 import org.passwordmaker.android.hashalgos.RipeMd160HashAlgo;
 import org.passwordmaker.android.hashalgos.Sha1HashAlgo;
 import org.passwordmaker.android.hashalgos.Sha256HashAlgo;
@@ -161,6 +162,9 @@ public class PwmHashAlgorithm {
 			switch (algo.getUnderlining()) {
 			case MD5:
 				normalHash = new Md5HashAlgo() ;
+				break;
+			case MD5_Version_0_6:
+				normalHash = new Md5v06HashAlgo();
 				break;
 			case SHA_256:
 				normalHash = new Sha256HashAlgo() ;

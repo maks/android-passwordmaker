@@ -138,6 +138,9 @@ public class PwmProfile implements Serializable {
 	}
 
 	public String getCharacters() {
+		if ( this.getHashAlgo().getHashAlgo().getUnderlining().equals(HashAlgo.MD5_Version_0_6)) {
+			return CharacterSetSelection.hex.getCharacterSet();
+		}
 		return characters;
 	}
 

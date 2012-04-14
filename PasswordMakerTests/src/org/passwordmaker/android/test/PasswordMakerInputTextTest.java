@@ -104,6 +104,7 @@ public class PasswordMakerInputTextTest  extends TestCase {
 		profile.getUrlComponents().add(UrlComponents.PortPathAnchorQuery);
 		assertEquals(notAUrl , pwm.getModifiedInputText(notAUrl));
 	}
+
 	
 	
 }
